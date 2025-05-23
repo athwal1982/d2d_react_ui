@@ -1,0 +1,2010 @@
+.ValidateContent {
+  padding: 12px 0px;
+  display: flex;
+  grid-template-rows: max-content minmax(220px, auto);
+  overflow: auto;
+}
+// .ValidateControlGroup {
+//   display: grid;
+//   grid-template-columns: 100%;
+//   align-items: center;
+//   grid-auto-rows: max-content;
+//   padding-right: 14px;
+//   padding-left: 20px;
+
+//   .Validatelabel {
+//     font-size: 15px;
+//     font-weight: 500;
+//     margin-bottom: 12px;
+//     color: #2c2927;
+//     text-align: left;
+//     text-decoration: 2px underline red;
+//   }
+// }
+
+.StatusBox {
+  display: flex;
+  font-size: 10px;
+  margin: 0px -11px;
+  padding: 0px 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  height: 100%;
+
+  span {
+    display: flex;
+    border-radius: 6px;
+    height: 20px;
+    width: calc(100% + 8px);
+    margin-top: 1px;
+    padding: 1px 3px 1px 3px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.ValidateFormFooter,
+.ValidateFormFooterRight {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 14px;
+  align-items: flex-end;
+  gap: 10px;
+  .FormFooterButton {
+    justify-content: center;
+    min-width: 86px;
+    border-radius: 2px;
+    padding: 7px 16px;
+    border: 1px solid #0d63ad;
+    background: linear-gradient(to bottom, #0d63ad, #0d63ad);
+  }
+  .FormFooterCancelButton {
+    justify-content: center;
+    min-width: 86px;
+    border-radius: 2px;
+    padding: 7px 16px;
+    border: 1px solid #ad071a;
+    background: linear-gradient(to bottom, #ea384d, #d31027);
+  }
+}
+.ValidateFormFooterRight {
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 10px;
+  position: sticky;
+  right: 0%;
+  border-top: 1px solid #ccc;
+  height: 48px;
+}
+
+.ModalBox {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: max-content auto;
+}
+
+.ModalCustomBox {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column: span 2;
+}
+
+.ModalCustomStripBox {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column: span 2;
+
+  p {
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #5d6d7e;
+    font-size: 13px;
+  }
+}
+
+.ModalCustomGroup {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-column: span 2;
+  grid-gap: 8px;
+}
+
+.PageStart {
+  display: grid;
+  grid-template-rows: max-content auto;
+  overflow: auto;
+
+  .MainSection {
+    display: grid;
+    padding: 12px;
+    overflow: auto;
+    .ContentPresenter {
+      font-size: 12px;
+      padding: 4px 10px;
+      background: #ebedef;
+      border-radius: 0px;
+      color: #3c414a;
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 11%);
+      border: 1px solid #d6dbdf;
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+    }
+
+    .ContentBox {
+      display: grid;
+      grid-template-rows: max-content auto 80px;
+      padding: 20px 8vw 40px 8vw;
+      background: #ffffff;
+      background: url("../../../Framework//Assets/Images/CalculatorBack.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px 8px rgb(0 0 0 / 4%);
+      overflow: auto;
+
+      .FormHeading {
+        margin-bottom: 20px;
+        h4 {
+          font-size: 18px;
+          font-weight: 900;
+          font-family: var(--fg-headingsFont);
+          color: #425364;
+          text-align: center;
+        }
+      }
+
+      .ContentSection {
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        overflow: auto;
+        padding-right: 12px;
+
+        .FormBox {
+          display: grid;
+          grid-template-columns: 33.3% 33.3% 33.3%;
+          grid-auto-rows: max-content;
+          column-gap: 18px;
+          row-gap: 4px;
+          width: 820px;
+          margin: 0px auto 30px auto;
+
+          .FormGroupBox {
+            display: grid;
+            grid-template-rows: repeat(2, max-content);
+
+            label {
+              font-weight: 600 !important;
+            }
+
+            > div > div > div > div > div {
+              border-color: #b9b9b9 !important;
+            }
+          }
+        }
+
+        .CalculatedData {
+          display: grid;
+
+          .DataHeading {
+            margin-bottom: 0px;
+            h4 {
+              font-size: 18px;
+              font-weight: 900;
+              font-family: var(--fg-headingsFont);
+              color: #425364;
+              text-align: center;
+            }
+          }
+
+          table {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            width: 100%;
+
+            th {
+              font-size: 0.75rem;
+              font-weight: 500;
+              color: #425364;
+              vertical-align: bottom;
+              border-bottom: 2px solid #b8e986;
+              text-align: center;
+            }
+
+            td {
+              font-size: 12px;
+              font-weight: 300;
+              color: #425364;
+              vertical-align: middle;
+              border-bottom: 2px solid #b8e986;
+              padding: 8px 0px;
+              text-align: center;
+
+              &:nth-child(1) {
+                word-break: break-all;
+                width: 210px;
+              }
+            }
+          }
+        }
+      }
+
+      .FooterSection {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: flex-end;
+        margin-right: -5vw;
+        margin-bottom: -20px;
+        gap: 12px;
+        align-items: flex-end;
+        padding-right: 0px;
+
+        button {
+          transition: all 0.3s ease;
+          background-color: #fff;
+          border: 1px solid #ffca00;
+          background: #ffca00 !important;
+          text-decoration: none;
+          box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 2px 4px 0 rgb(0 0 0 / 10%);
+          font-size: 1rem;
+          font-weight: 500;
+          color: #494949 !important;
+          padding: 7px 15px;
+          min-width: 140px;
+          text-align: center;
+          display: inline-block;
+          min-height: 40px;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background: #ffffff !important;
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Box {
+  display: grid;
+  // grid-template-columns: 350px auto;
+  grid-template-columns: repeat(3, 420px);
+  grid-template-rows: 100%;
+  // padding: 12px;
+  padding: 10px;
+  overflow: auto;
+  gap: 4px;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 76px;
+  z-index: 101;
+  background: #eff2f6;
+
+  .Div {
+    background: #fff;
+    border-radius: 4px;
+    display: grid;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 11%);
+    border: 1px solid #d6dbdf;
+    border-bottom: none;
+    overflow: auto;
+    grid-template-rows: auto max-content;
+
+    // ================================= Validation Box Style Start ================================= //
+
+    .ValidateBox {
+      display: grid;
+      grid-template-rows: max-content auto;
+      overflow: auto;
+      .ValidateTitle {
+        display: grid;
+        grid-template-columns: auto max-content;
+        padding: 8px 12px;
+        gap: 12px;
+
+        h3 {
+          font-size: 14px;
+          color: #34495e;
+          font-weight: 600;
+          display: grid;
+          grid-template-columns: max-content auto;
+          gap: 18px;
+          align-items: center;
+
+          &::after {
+            content: "";
+            border-bottom: 2px solid #34495e;
+            width: 100%;
+          }
+        }
+      }
+
+      .ValidateContent {
+        border: 1px solid #d6dbdf;
+        border-radius: 2px;
+        display: grid;
+        grid-template-rows: auto max-content;
+        overflow: auto;
+
+        .ValidateForm {
+          display: grid;
+          grid-template-rows: max-content max-content;
+          gap: 10px;
+          border-bottom: 1px solid #d6dbdf;
+          margin-bottom: 4px;
+
+          .ValidateInputGroup {
+            display: grid;
+            grid-template-columns: 100%;
+            align-items: center;
+            grid-auto-rows: max-content;
+            grid-row: span 2;
+
+            label {
+              font-size: 15px;
+              font-weight: 500;
+              margin-bottom: 12px;
+              color: #2c2927;
+              text-align: left;
+              padding-left: 10px;
+              text-decoration: 2px underline red;
+            }
+
+            .ValidateTabGroup {
+              list-style: none;
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+              button {
+                padding: 4px 10px;
+                border: 2px solid rgba(118, 118, 118, 0.4);
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                border-radius: 4px;
+                cursor: pointer;
+                background: #fff;
+                height: 40px;
+
+                &:active,
+                &:hover {
+                  transform: none !important;
+                  box-shadow: none !important;
+                }
+
+                &.Active {
+                  border: 2px solid #367ef4 !important;
+                  .ValidateTabCheckBox {
+                    border: 4px solid #367ef4;
+                  }
+                }
+
+                .ValidateTabCheckBox {
+                  height: 13px;
+                  width: 13px;
+                  border-radius: 50%;
+                  border: 2px solid rgb(118, 118, 118);
+                }
+
+                span {
+                  font-size: 13px;
+                  font-weight: 500;
+                }
+              }
+            }
+            .Authentication_Header {
+              border: 2px solid #828080;
+              background-color: #828080;
+              padding: 4px 10px;
+              span {
+                font-size: 14.5px;
+                font-weight: 500;
+                color: #ffffff;
+              }
+            }
+          }
+
+          .ValidateControlGroup {
+            display: grid;
+            grid-template-columns: 100%;
+            align-items: center;
+            grid-auto-rows: max-content max-content;
+            gap: 3px;
+            padding: 3px 12px;
+
+            .Validatelabel {
+              font-size: 15px;
+              font-weight: 500;
+              margin-bottom: 12px;
+              color: #2c2927;
+              text-align: left;
+              text-decoration: 2px underline red;
+            }
+            label {
+              font-size: 13px;
+              font-weight: 600;
+              color: #3a4a54;
+            }
+          }
+
+          .ValidateFormFooter {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 14px;
+            align-items: flex-end;
+
+            .FormFooterButton {
+              justify-content: center;
+              min-width: 86px;
+              border-radius: 2px;
+              padding: 7px 16px;
+              border: 1px solid #12344d;
+              background: linear-gradient(to bottom, #264966, #12344d);
+            }
+          }
+        }
+
+        .ValidateProfile {
+          display: grid;
+        }
+      }
+    }
+
+    // ================================= Validation Box Style End =================================== //
+
+    // ================================= Indo Div Style Start ======================================= //
+
+    .InfoDiv {
+      display: grid;
+      grid-template-rows: max-content max-content;
+      overflow: auto;
+      white-space: nowrap;
+      .FarmerInfoDiv,
+      .CreationDiv {
+        display: grid;
+        grid-template-rows: max-content auto;
+        overflow: auto;
+
+        .Title {
+          display: block;
+          padding: 1px 15px;
+
+          h3 {
+            font-size: 14px;
+            color: #34495e;
+            font-weight: 600;
+            display: grid;
+            grid-template-columns: max-content auto;
+            gap: 18px;
+            align-items: center;
+
+            &::after {
+              content: "";
+              border-bottom: 2px solid #34495e;
+              width: 100%;
+            }
+          }
+        }
+
+        .Content {
+          display: grid;
+          // border: 1px solid #ccc;
+          border-left: none;
+          overflow: auto;
+          padding: 8px 15px;
+        }
+
+        .AppointmentHistoryDataGrid {
+          display: grid;
+          height: 50vh;
+        }
+      }
+      .CreationDiv {
+        .Content {
+          border-bottom: none;
+        }
+      }
+      .FarmerInfoDiv {
+        .Content {
+          grid-template-rows: repeat(2, max-content) minmax(max-content, auto);
+          .ContentDiv {
+            border-top: 1px solid #d6dbdf;
+            margin-top: 6px;
+            padding: 12px 0px;
+          }
+
+          .ContentPresenter {
+            font-size: 12px;
+            padding: 4px 10px;
+            background: #ebedef;
+            border-radius: 1px;
+            color: #3c414a;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 11%);
+            border: 1px solid #d6dbdf;
+            min-height: 28px;
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+          }
+
+          .Button {
+            margin: 0px 0px 1px 0px;
+            justify-content: center;
+            min-width: 70px;
+            border-radius: 2px;
+            padding: 6px 12px;
+            border: 1px solid #3d8bda;
+            color: #fff;
+            background: linear-gradient(#3699ff, #3d8bda);
+          }
+        }
+      }
+
+      .CreationDiv {
+        .Content {
+          padding-top: 12px;
+        }
+
+        .ValidateFormFooter {
+          display: flex;
+          justify-content: flex-end;
+          padding: 14px 30px;
+          align-items: flex-end;
+          gap: 10px;
+
+          .FormFooterButton {
+            justify-content: center;
+            min-width: 86px;
+            border-radius: 2px;
+            padding: 7px 16px;
+            border: 1px solid #12344d;
+            background: linear-gradient(to bottom, #264966, #12344d);
+          }
+
+          .FormFooterCancelButton {
+            justify-content: center;
+            min-width: 86px;
+            border-radius: 2px;
+            padding: 7px 16px;
+            border: 1px solid #ad071a;
+            background: linear-gradient(to bottom, #ea384d, #d31027);
+          }
+        }
+      }
+    }
+
+    // ================================= Indo Div Style End ========================================= //
+  }
+}
+.Year {
+  padding: 5px 20px;
+  background-color: rgb(207, 213, 225);
+  color: #12344d;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.Address {
+  display: grid;
+  grid-template-rows: 20px auto;
+  span {
+    z-index: 9999999;
+    font-weight: 500;
+    margin: 10px 0px 0px 10px;
+    font-size: 16px;
+    color: #2c3f4e;
+    background-color: rgb(210, 59, 59);
+  }
+}
+
+.Form_One {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.Form_One_Other {
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+// ======================================== Skelton ===============================================================
+
+.SkaletonForm {
+  // display: grid;
+  height: 100%;
+  width: 1fr;
+  padding-top: 0px;
+
+  .InformationSkaleton {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+}
+
+.Data {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  gap: 4px;
+
+  .Id {
+    width: 100%;
+    height: 30px;
+    background-color: #f1f1f4;
+    border-radius: 4px;
+    animation: idial infinite 1s alternate;
+  }
+  @keyframes idial {
+    0% {
+      background-color: #f1f1f2;
+    }
+    50% {
+      background-color: #f1f1f4;
+    }
+    100% {
+      background-color: #f1f1f7;
+    }
+  }
+
+  .Contents {
+    width: auto;
+    height: 30px;
+    background-color: #f1f1f4;
+    border-radius: 4px;
+    border: none;
+    width: 80%;
+  }
+}
+
+.BizPageStart {
+  display: grid;
+  grid-template-rows: max-content auto;
+  .DataGrid {
+    display: grid;
+  }
+
+  .PageBar {
+    background-color: #828080;
+    padding: 8px 5px 7px 10px;
+    height: 42px;
+    z-index: 1;
+    display: flex;
+    grid-template-columns: auto repeat(2, max-content);
+    align-items: center;
+    gap: 12px;
+
+    p {
+      display: grid;
+      grid-template-columns: max-content auto;
+      column-gap: 8px;
+
+      svg {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--gray-600);
+      }
+
+      span {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--white);
+        font-family: var(--fg-headingsFont);
+      }
+    }
+
+    .PageBarBox {
+      display: grid;
+      justify-content: flex-end;
+
+      button {
+        padding: 0 12px;
+        height: 27px;
+        font-size: 12px;
+        border: 1px solid var(--fg-Pagebar-border);
+        border-radius: 2px;
+        color: var(--white);
+        background-image: linear-gradient(180deg, var(--fg-Pagebar-button-bg1), var(--fg-Pagebar-button-bg2));
+        cursor: pointer;
+        display: none;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+// ------------------------- EnquiryPopupData -----------------//
+
+.PageDiv {
+  background-color: #fff;
+  right: 0;
+  z-index: 99999;
+  top: 0;
+  position: fixed;
+  display: grid;
+  height: 100vh;
+  left: 76px;
+  .EnquiryMainSection {
+    display: grid;
+    grid-template-rows: max-content auto;
+    overflow: auto;
+    .HeaderTop {
+      background-color: #828080;
+      height: 38px;
+      display: grid;
+      grid-template-columns: 2fr 0fr;
+      padding: 5px 20px;
+      line-height: 20px;
+      gap: 15px;
+
+      > h2 {
+        white-space: nowrap;
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        margin: 0px;
+      }
+
+      > button {
+        background-image: linear-gradient(180deg, #f67c1b, #ef6817);
+        border: 1px solid #e15500;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 2px;
+        width: 80px;
+      }
+    }
+
+    .EnQuiryPopupPage {
+      display: grid;
+      grid-template-columns: auto;
+      overflow: auto;
+
+      .ChatBox {
+        display: grid;
+        grid-template-rows: max-content auto;
+        border-right: 1px solid #ccc;
+        overflow: auto;
+
+        .Header {
+          display: grid;
+          grid-template-rows: max-content max-content;
+          border-left: 1px solid #d8dcde;
+          border-right: 1px solid #d8dcde;
+        }
+        .Heading {
+          height: 35px;
+          padding: 5px 14px;
+          display: grid;
+          grid-template-columns: max-content max-content minmax(max-content, auto);
+          align-items: center;
+          column-gap: 12px;
+
+          .TickIcon {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 2px 0px 3px;
+
+            > svg {
+              font-size: 34px;
+            }
+
+            .TicketLogo {
+              fill: rgb(245, 76, 76);
+            }
+          }
+
+          .TicketDetail {
+            h4 {
+              font-size: 15px;
+              font-weight: 700;
+              font-family: var(--fg-headingsFont);
+              color: var(--gray-800);
+              user-select: none;
+              -webkit-user-drag: none;
+
+              span {
+                font-family: var(--fg-headingsFont);
+                color: var(--gray-500);
+                margin-left: 6px;
+              }
+            }
+
+            p {
+              font-size: 10px;
+              color: rgb(104, 115, 125);
+              margin: 2px 1px 0px;
+            }
+          }
+
+          .TicketSubDetail {
+            display: grid;
+            grid-template-columns: repeat(2, max-content);
+            align-items: center;
+            grid-template-rows: 100%;
+            justify-content: flex-end;
+            column-gap: 14px;
+
+            .StatusBox {
+              font-size: 13px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 5px 14px;
+              border-radius: 3px;
+              box-shadow: 0px -1px 5px 0 rgba(0, 0, 0, 0.1);
+              color: var(--white);
+              background: var(--gray-600);
+              margin-right: 0px;
+            }
+
+            .SubDetail {
+              border-left: 1px solid #d8dcde;
+              padding-left: 12px;
+            }
+
+            h4 {
+              font-size: 14px;
+              font-weight: 700;
+              font-family: var(--fg-headingsFont);
+              text-align: left;
+              color: var(--gray-800);
+              padding: 2px 0px;
+              border-radius: 50px;
+              user-select: none;
+              -webkit-user-drag: none;
+            }
+
+            p {
+              font-size: 10px;
+              font-weight: 400;
+              color: rgb(104, 115, 125);
+              margin: 1px 1px 0px;
+            }
+          }
+
+          & {
+            &.urgent {
+              .TicketSubDetail {
+                .StatusBox {
+                  background: var(--pr-urgent);
+                }
+              }
+              .TickIcon {
+                > svg {
+                  color: var(--pr-urgent);
+                }
+              }
+            }
+
+            &.high {
+              .TicketSubDetail {
+                .StatusBox {
+                  background: var(--pr-high);
+                }
+              }
+              .TickIcon {
+                > svg {
+                  color: var(--pr-high);
+                }
+              }
+            }
+
+            &.medium {
+              .TicketSubDetail {
+                .StatusBox {
+                  background: var(--pr-medium);
+                }
+              }
+              .TickIcon {
+                > svg {
+                  color: var(--pr-medium);
+                }
+              }
+            }
+
+            &.low {
+              .TicketSubDetail {
+                .StatusBox {
+                  background: var(--pr-low);
+                }
+              }
+              .TickIcon {
+                > svg {
+                  color: var(--pr-low);
+                }
+              }
+            }
+          }
+        }
+
+        .TicketRemarks {
+          height: 55px;
+          padding: 2px 5px 0px 65px;
+          border-bottom: 1px solid #d8dcde;
+          display: flex;
+          grid-template-columns: max-content max-content minmax(max-content, auto);
+          align-items: center;
+          column-gap: 12px;
+          word-break: normal;
+          flex-wrap: wrap;
+
+          p {
+            font-size: 12px;
+            color: #ffffff;
+            margin: 2px 1px 0px;
+            background-color: #29b873;
+            border-radius: 2px;
+            padding: 4px 10px;
+            span {
+              font-weight: 500;
+            }
+          }
+        }
+        .MainSection {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: max-content;
+          padding: 10px;
+          gap: 8px;
+          overflow: auto;
+
+          .DataCard {
+            background: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 14%);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            padding: 10px 14px;
+            display: grid;
+            grid-template-rows: repeat(3, max-content) minmax(max-content, auto);
+            gap: 9px;
+            cursor: pointer;
+            border: 2px solid #fff;
+            user-select: none !important;
+
+            &:hover {
+              border: 2px solid #5090fe !important;
+            }
+
+            h4 {
+              font-weight: 600;
+              font-size: 15px;
+              margin-bottom: 2px;
+              color: #34495e;
+
+              span {
+                color: #2e4053;
+                font-weight: 700;
+                text-decoration: underline;
+              }
+            }
+
+            .Details {
+              display: grid;
+              gap: 12px;
+              grid-template-columns: auto max-content;
+
+              p {
+                display: grid;
+                grid-template-columns: repeat(2, max-content);
+                align-items: center;
+                gap: 8px;
+                font-size: 12px;
+                color: #566473;
+
+                svg {
+                  font-size: 17px;
+                  color: #000000;
+                  margin-right: 2px;
+                }
+              }
+            }
+
+            h5 {
+              display: grid;
+              grid-template-columns: max-content auto;
+              align-items: center;
+              gap: 8px;
+              font-weight: 500;
+              font-size: 11px;
+              color: #566473;
+              text-align: left;
+
+              svg {
+                font-size: 20px;
+                color: #12344d;
+              }
+            }
+
+            .DataTabs {
+              display: grid;
+              grid-template-columns: repeat(1, 1fr);
+              margin-top: auto;
+              gap: 8px;
+              border-top: 1px solid #d6dbdf;
+              padding-top: 12px;
+
+              > div {
+                background: #3699ff;
+                min-height: 62px;
+                height: 100%;
+                padding: 6px 12px;
+                border-radius: 6px;
+                display: grid;
+                grid-template-rows: repeat(1, auto);
+
+                p {
+                  font-size: 11px;
+                  font-weight: 500;
+                  text-align: left;
+                  align-self: center;
+                  margin-bottom: auto;
+                  color: #ffffff;
+                }
+
+                &:nth-child(1) {
+                  span {
+                    color: #ff5959;
+                  }
+                }
+
+                &:nth-child(2) {
+                  span {
+                    color: #2e8efa;
+                  }
+                }
+
+                &:nth-child(3) {
+                  span {
+                    color: #07a786;
+                  }
+                }
+
+                &:nth-child(4) {
+                  span {
+                    color: #ff9800;
+                  }
+                }
+              }
+            }
+
+            &.Selected__ClientListBox {
+              border: 2px solid #5090fe !important;
+              -webkit-transition: all 0.15s ease;
+              transition: all 0.15s ease;
+              background-color: #ffffff;
+              color: #000000;
+            }
+
+            &.InActive__ClientListBox {
+              -webkit-transition: all 0.15s ease;
+              transition: all 0.15s ease;
+              background-color: #f0f0f0;
+              color: #000000;
+            }
+          }
+        }
+      }
+
+      .RightContent {
+        display: grid;
+        .UserBox {
+          display: grid;
+          grid-template-rows: max-content auto;
+          overflow: auto;
+          .UserHeader {
+            display: grid;
+            grid-template-columns: auto max-content;
+            align-items: center;
+            padding: 17px 15px;
+            border-bottom: 1px solid #ccc;
+            .UserContent {
+              display: grid;
+              grid-template-columns: max-content max-content;
+              gap: 5px;
+              .Icon {
+                .UserLogo {
+                  color: rgb(164, 163, 163);
+                  font-size: 35px;
+                }
+              }
+              .Info {
+                display: grid;
+                grid-template-rows: max-content max-content;
+                gap: 10px;
+                h4 {
+                  font-size: 16.5px;
+                  font-weight: 600;
+                  color: #3a4a54;
+                }
+                span {
+                  color: #757575;
+                  font-size: 12.7px;
+                }
+              }
+            }
+
+            .Userbtn {
+              display: grid;
+              grid-template-columns: max-content max-content;
+              gap: 9px;
+              color: #5c646b;
+              font-size: 18.5px;
+            }
+          }
+          .Data_Div {
+            display: grid;
+            padding: 17px 20px;
+            .ContentDiv {
+              > .Data {
+                display: grid;
+                grid-template-columns: max-content auto;
+                gap: 15px;
+
+                .Logo {
+                  background-color: rgb(253, 141, 61);
+                  height: 27px;
+                  width: 27px;
+                  border-radius: 4px;
+                  color: rgb(255, 255, 255);
+                  font-size: 18px;
+                  display: grid;
+                  align-items: center;
+                  justify-content: center;
+                }
+                > span {
+                  color: #29333a;
+                  font-size: 13.5px;
+                  font-weight: 500;
+                  // max-width:280px ;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .MainSection {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: max-content;
+        padding: 10px;
+        gap: 8px;
+        overflow: auto;
+
+        .DataCard {
+          background: #ffffff;
+          border-radius: 4px;
+          // box-shadow: 0 1px 3px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 14%);
+          box-shadow: -3px 2px 17px -5px hsla(0, 1%, 46%, 0.75) !important;
+          transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+          padding: 10px 14px;
+          display: grid;
+          grid-template-rows: repeat(3, max-content) minmax(max-content, auto);
+          gap: 9px;
+          cursor: pointer;
+          border: 2px solid #fff;
+          user-select: none !important;
+
+          &:hover {
+            border: 2px solid #5090fe !important;
+          }
+
+          h4 {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 2px;
+            color: #34495e;
+
+            span {
+              color: #2e4053;
+              font-weight: 700;
+              text-decoration: underline;
+            }
+          }
+
+          .Details {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: auto max-content;
+
+            p {
+              display: grid;
+              grid-template-columns: repeat(2, max-content);
+              align-items: center;
+              gap: 8px;
+              font-size: 13px;
+              color: #566473;
+
+              svg {
+                font-size: 17px;
+                color: #000000;
+                margin-right: 2px;
+              }
+            }
+          }
+
+          h5 {
+            display: grid;
+            grid-template-columns: max-content auto;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 11px;
+            color: #566473;
+            text-align: left;
+
+            svg {
+              font-size: 20px;
+              color: #12344d;
+            }
+          }
+
+          .DataTabs {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: auto;
+            gap: 8px;
+            border-top: 1px solid #d6dbdf;
+            padding-top: 12px;
+
+            > div {
+              background: #0d63ad;
+              min-height: 62px;
+              height: 100%;
+              padding: 6px 12px;
+              border-radius: 6px;
+              display: grid;
+              grid-template-rows: repeat(1, auto);
+
+              p {
+                font-size: 12px;
+                font-weight: 500;
+                text-align: justify;
+                align-self: center;
+                margin-bottom: auto;
+                color: #ffffff;
+              }
+
+              &:nth-child(1) {
+                span {
+                  color: #ff5959;
+                }
+              }
+
+              &:nth-child(2) {
+                span {
+                  color: #2e8efa;
+                }
+              }
+
+              &:nth-child(3) {
+                span {
+                  color: #07a786;
+                }
+              }
+
+              &:nth-child(4) {
+                span {
+                  color: #ff9800;
+                }
+              }
+            }
+          }
+
+          &.Selected__ClientListBox {
+            border: 2px solid #5090fe !important;
+            -webkit-transition: all 0.15s ease;
+            transition: all 0.15s ease;
+            background-color: #ffffff;
+            color: #000000;
+          }
+
+          &.InActive__ClientListBox {
+            -webkit-transition: all 0.15s ease;
+            transition: all 0.15s ease;
+            background-color: #f0f0f0;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Applicant_CBox {
+  background: #fff;
+  display: flex;
+  align-items: stretch !important;
+  flex-direction: column;
+  border: 1px solid #d5d8dc;
+  padding: 10px 14px 14px 14px;
+  border-radius: 0.18rem;
+}
+
+.Applicant_MCbox {
+  justify-content: flex-end !important;
+  display: flex !important;
+  height: 24px;
+  cursor: pointer;
+  margin-bottom: -12px;
+  position: relative;
+}
+
+.Applicant_Icon_Container {
+  position: relative;
+
+  .Biz_Icon {
+    font-size: 30px;
+    color: #fff;
+    padding: 0px 4px;
+    border-radius: 0.18rem;
+    height: 18px;
+    background: #828080;
+  }
+}
+.DynBiz_ContextMenu {
+  filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 6px 16px);
+  min-width: 180px;
+  background: #fff;
+  position: absolute;
+  // top: 25px;
+  right: 0px;
+  border-radius: 4px;
+  padding: 8px 9px 8px 8px;
+  z-index: 1;
+  white-space: nowrap;
+  display: grid;
+  grid-auto-rows: max-content;
+  transform: scale(1);
+  transition: transform 50ms ease-in-out;
+  transform-origin: top left;
+  border: 2px solid #ebebed;
+}
+
+.DynBiz_ContextMenu_list {
+  display: grid;
+  grid-template-columns: 20px auto;
+  grid-template-rows: 20px;
+  align-items: center;
+  column-gap: 6px;
+  margin-bottom: 5px;
+  padding: 4px 7px 6px 7px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  transform: none !important;
+  box-shadow: none !important;
+  border-radius: 3px;
+  svg {
+    font-size: 20px;
+    color: #8a909b;
+  }
+  span {
+    color: #404455;
+    text-align: left;
+    margin-top: 3px;
+    font-size: 13px;
+    padding-right: 2px;
+  }
+  &:hover {
+    background: #f0f1f3;
+    svg {
+      color: #5a6474 !important;
+    }
+  }
+  &.dRed {
+    &:hover {
+      background: #ffecee;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0px !important;
+  }
+}
+
+.DynBiz_ContextMenu_lined {
+  background: #e4e4e4 !important;
+  margin-bottom: 5px;
+  height: 1px;
+  margin-left: -9px;
+  margin-right: -10px;
+}
+
+.DynBiz_ContextMenu_list.dRed:hover svg,
+.DynBiz_ContextMenu_list.dRed:hover span {
+  color: #fe3e5a !important;
+  opacity: 1 !important;
+}
+
+.CustomerBox {
+  display: grid;
+  grid-template-rows: max-content auto;
+
+  .Heading {
+    height: 90px;
+    padding: 5px 20px;
+    border-bottom: 1px solid #d8dcde;
+    display: grid;
+    grid-template-columns: minmax(max-content, auto) max-content;
+    align-items: center;
+    column-gap: 12px;
+
+    h4 {
+      font-size: 17px;
+      font-weight: 700;
+      font-family: var(--fg-headingsFont);
+      color: var(--gray-800);
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .ActionBox {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      column-gap: 10px;
+
+      svg {
+        font-size: 19px;
+        cursor: pointer;
+        color: rgb(104, 115, 125);
+      }
+    }
+  }
+
+  .ReqInfo {
+    display: grid;
+    grid-template-columns: max-content minmax(max-content, auto);
+    align-items: center;
+    column-gap: 12px;
+
+    img {
+      height: 36px;
+      border-radius: 50px;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 17px;
+      font-family: var(--fg-headingsFont);
+      color: var(--gray-800);
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    p {
+      font-size: 12px;
+      color: rgb(104, 115, 125);
+      margin: 2px 1px 0px;
+    }
+  }
+
+  .MainBox {
+    display: grid;
+    grid-template-rows: max-content minmax(max-content, auto);
+
+    .InfoBox {
+      display: grid;
+      padding: 6px 0px;
+      min-height: 100px;
+      grid-auto-rows: max-content;
+      row-gap: 2px;
+      align-items: center;
+
+      .SubBox {
+        display: grid;
+        grid-template-columns: max-content auto max-content;
+        align-items: center;
+        padding: 6px 14px 6px 26px;
+
+        &:hover {
+          cursor: pointer;
+
+          svg:last-child {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+
+        &.DescSubBox {
+          display: grid;
+          grid-template-columns: 100%;
+
+          p {
+            font-size: 11px;
+            font-weight: 400;
+            padding: 10px 14px;
+            background: rgb(242, 246, 249);
+          }
+        }
+
+        svg:first-child {
+          font-size: 24px;
+          color: var(--gray-800);
+          margin-top: 1.5px;
+          margin-right: 12px;
+          background: #fe824f;
+          padding: 5px;
+          border-radius: 4px;
+          color: var(--white);
+        }
+
+        p {
+          font-size: 12px;
+          font-weight: 500;
+          color: var(--gray-600);
+
+          span {
+            padding-left: 4px;
+          }
+        }
+
+        svg:last-child {
+          font-size: 16px;
+          color: var(--gray-800);
+          margin-top: 4px;
+          margin-left: 8px;
+          margin-right: 12px;
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+    }
+
+    .PropertiesBox {
+      border-top: 1px solid #d8dcde;
+      display: grid;
+      grid-template-rows: max-content auto;
+    }
+
+    .FilterBox {
+      background: var(--white);
+      display: grid;
+      grid-template-rows: auto max-content;
+      padding: 12px;
+
+      .Footer {
+        button {
+          width: 100%;
+          color: var(--white);
+          background-image: linear-gradient(var(--fg-login-button-bg1) 0%, var(--fg-login-button-bg2) 100%);
+          padding: 0 42px;
+          font-size: 13px;
+          height: 32px;
+          border: 0px;
+          border-radius: 2px;
+          margin-top: 20px;
+          letter-spacing: 0.5px;
+          font-weight: 600;
+          font-family: var(--fg-headingsFont);
+
+          &:hover {
+            cursor: pointer;
+            color: var(--white);
+            background: #12344d;
+          }
+
+          &:disabled {
+            cursor: not-allowed;
+            transition: 0.1s linear;
+            transform: none;
+            box-shadow: none;
+            color: #f3f5f7;
+            background-image: linear-gradient(to bottom, #92a4b2, #8899a6);
+          }
+        }
+      }
+    }
+  }
+}
+
+.disableDivService {
+  pointer-events: none;
+  opacity: 0.6;
+  background: #000000;
+}
+
+.myCardGrid {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  overflow: auto;
+}
+.span_service {
+  font-size: 14px;
+  padding-left: 6px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  text-align: justify;
+}
+.span_documnet_Heading {
+  font-size: 11px;
+  padding-left: 6px;
+  padding-top: 2px;
+  font-weight: 600;
+  text-align: justify;
+}
+.div_documentList {
+  display: flex;
+  overflow: auto;
+}
+.div_service_documentList {
+  font-size: 13px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 2px;
+  line-height: 20px;
+  font-weight: normal;
+  text-align: justify;
+  border-right: solid 2px gray;
+  width: 50%;
+  float: left;
+  height: 55vh;
+
+  span {
+    font-size: 13px;
+    padding-top: 2px;
+    font-weight: 600;
+    text-align: justify;
+  }
+}
+.div_optional_documentList {
+  font-size: 13px;
+  padding-left: 8px;
+  padding-right: 6px;
+  padding-top: 2px;
+  line-height: 20px;
+  font-weight: normal;
+  text-align: justify;
+  word-break: break-all;
+  width: 50%;
+  float: left;
+
+  span {
+    font-size: 13px;
+    padding-top: 2px;
+    font-weight: 600;
+    text-align: justify;
+  }
+}
+.VLESearch {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: max-content;
+  padding: 10px;
+  gap: 4px;
+  overflow: auto;
+
+  .VLESearchTitle {
+    display: grid;
+    grid-template-columns: auto max-content;
+    padding: 1px 2px;
+    gap: 2px;
+
+    h3 {
+      font-size: 14px;
+      color: #34495e;
+      font-weight: 600;
+      display: grid;
+      grid-template-columns: max-content auto;
+      gap: 18px;
+      align-items: center;
+
+      &::after {
+        content: "";
+        border-bottom: 2px solid #34495e;
+        width: 100%;
+      }
+    }
+  }
+
+  .VLECard {
+    background: #ffffff;
+    border-radius: 4px;
+    // box-shadow: 0 1px 3px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 14%);
+    box-shadow: -3px 2px 17px -5px hsla(0, 6%, 7%, 0.75) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 10px 14px;
+    display: grid;
+    grid-template-rows: repeat(3, max-content) minmax(max-content, auto);
+    gap: 4px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    user-select: none !important;
+  }
+
+  .VLESearchFooterRight {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2px;
+    align-items: flex-end;
+    gap: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #ccc;
+
+    .VLESearchFooterButton {
+      justify-content: center;
+      min-width: 86px;
+      border-radius: 2px;
+      padding: 7px 16px;
+      border: 1px solid #0d63ad;
+      background: linear-gradient(to bottom, #0d63ad, #0d63ad);
+    }
+  }
+
+  .VLEGrid {
+    display: grid;
+    grid-template-rows: max-content 228px;
+    overflow: auto;
+  }
+
+  .VLEDataCard {
+    background: #ffffff;
+    border-radius: 4px;
+    // box-shadow: 0 1px 3px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 14%);
+    box-shadow: 2px 4px 6px 4px #c1c1c1;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 10px 14px;
+    display: grid;
+    grid-template-rows: repeat(3, max-content) minmax(max-content, auto);
+    gap: 9px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    user-select: none !important;
+
+    // &:hover {
+    //   border: 2px solid #5090fe !important;
+    // }
+
+    h4 {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 2px;
+      color: #34495e;
+
+      span {
+        color: #2e4053;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+
+    .Details {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: auto max-content;
+
+      p {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        // color: #566473;
+
+        svg {
+          font-size: 17px;
+          color: #000000;
+          margin-right: 2px;
+        }
+      }
+    }
+
+    h5 {
+      display: grid;
+      grid-template-columns: max-content auto;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 11px;
+      color: #566473;
+      text-align: left;
+
+      svg {
+        font-size: 20px;
+        color: #12344d;
+      }
+    }
+
+    .DataTabs {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: auto;
+      gap: 8px;
+      border-top: 1px solid #d6dbdf;
+      padding-top: 12px;
+
+      > div {
+        background: #3699ff;
+        min-height: 62px;
+        height: 100%;
+        padding: 6px 12px;
+        border-radius: 6px;
+        display: grid;
+        grid-template-rows: repeat(1, auto);
+
+        p {
+          font-size: 12px;
+          font-weight: 500;
+          text-align: left;
+          align-self: center;
+          margin-bottom: auto;
+          color: #ffffff;
+        }
+
+        &:nth-child(1) {
+          span {
+            color: #ff5959;
+          }
+        }
+
+        &:nth-child(2) {
+          span {
+            color: #2e8efa;
+          }
+        }
+
+        &:nth-child(3) {
+          span {
+            color: #07a786;
+          }
+        }
+
+        &:nth-child(4) {
+          span {
+            color: #ff9800;
+          }
+        }
+      }
+    }
+
+    &.Selected__ClientListBox {
+      border: 2px solid #5090fe !important;
+      -webkit-transition: all 0.15s ease;
+      transition: all 0.15s ease;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    &.InActive__ClientListBox {
+      -webkit-transition: all 0.15s ease;
+      transition: all 0.15s ease;
+      background-color: #f0f0f0;
+      color: #000000;
+    }
+  }
+}
+
+.StatusBox {
+  display: flex;
+  font-size: 10px;
+  margin: 0px -11px;
+  padding: 0px 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  height: 100%;
+}
+.spanStatusBox {
+  display: flex;
+  border-radius: 6px;
+  height: 20px;
+  width: calc(100% + 8px);
+  margin-top: 1px;
+  padding: 1px 3px 1px 3px;
+  align-items: center;
+  justify-content: center;
+}
+.ticketCounterBar {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: max-content;
+  align-items: center;
+  gap: 4px;
+
+  span {
+    font-size: 12.5px;
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 50px;
+    padding-left: 2px;
+    color: #ffffff;
+  }
+}
+
+.vleMapAppointentStatus {
+  background-color: #29b873;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.addbutton {
+  font-size: 18px;
+  background: #e15500;
+  color: #ffffff;
+  padding: 2px;
+  height: 26px;
+  width: 100%;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 0.25rem;
+  font-size: 12px;
+}
+tr.blue th {
+  background: #0d63ad;
+  color: white;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+th {
+  background: white;
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+.table_bordered td {
+  border: 1px solid #ffd0ae;
+  text-align: center;
+}
+.table_bordered th {
+  border: 1px solid #f7f7f7;
+  text-align: center;
+}
+.table_stripped > tbody > tr:nth-child(odd) > td {
+  background: #b4d0eb !important;
+}
+
+.table_stripped > tbody > tr:nth-child(odd) > th {
+  background: #b4d0eb;
+}
+.table_Height {
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 75vh;
+  overflow: auto;
+  white-space: nowrap;
+}
+.table_Height::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table_Height::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+}
+
+.table_Height::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}

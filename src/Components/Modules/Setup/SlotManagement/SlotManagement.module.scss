@@ -1,0 +1,40 @@
+.PageStart {
+  display: grid;
+  grid-template-rows: 100%;
+  overflow: auto;
+
+  .Card {
+    display: grid;
+    grid-template-rows: max-content auto;
+    overflow: auto;
+
+    .ActionButton,
+    .UnAssignActionButton {
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20px;
+      font-size: 11.7px;
+      border-radius: 2px;
+      cursor: pointer;
+      color: rgb(251, 252, 253);
+      background-color: rgb(28, 129, 212);
+      font-weight: 500;
+      border: 2px solid rgb(25, 138, 231);
+      color: rgb(252, 252, 252);
+    }
+
+    .UnAssignActionButton {
+      background: #f8e1e1 !important;
+      border: 2px solid red;
+      color: red;
+    }
+  }
+}
+
+.CardPopUp {
+  display: grid;
+  grid-template-rows: max-content auto;
+  overflow: auto;
+}

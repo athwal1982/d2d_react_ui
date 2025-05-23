@@ -1,0 +1,147 @@
+.PageBar {
+  display: grid;
+  background-color: #828080;
+  padding: 8px 14px 7px 14px;
+  height: 42px;
+  z-index: 1;
+  grid-column-gap: 8px;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #828080;
+  overflow-y: hidden !important;
+}
+
+.DynBiz_PageTitle_Select {
+  min-width: 180px;
+}
+
+.DynBiz_PageTitle_SearchBox {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto 68px;
+  align-items: center;
+  border-radius: 2px;
+  border: 1px solid #3d8bda;
+  position: relative;
+}
+
+.DynBiz_PageTitle_SearchInputBox {
+  padding: 1px 8px 2px 8px;
+  border: none;
+  height: 27px;
+  background-color: transparent;
+  color: rgb(63, 66, 84) !important;
+  outline: none;
+  width: 170px;
+}
+
+.DynBiz_PageTitle_SearchBoxBtn {
+  background-image: linear-gradient(#3699ff, #3d8bda);
+  height: 100%;
+  font-size: 12px;
+  color: #fff;
+  align-items: center;
+  padding: 0 8px;
+  border: none;
+  width: 68px;
+  border-left: 1px solid #3d8bda;
+  border-radius: 0 1px 1px 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.DynBiz_PageTitle_Btn {
+  padding: 0 12px;
+  height: 27px;
+  font-size: 12px;
+  border: 1px solid #e15500;
+  border-radius: 2px;
+  color: var(--Main-light-text-color);
+  background-image: linear-gradient(180deg, #f67c1b, #ef6817);
+  cursor: pointer;
+  color: #fff;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.DynBiz_PageTitle_ExcelBtn {
+  background-color: whitesmoke;
+  color: var(--Main-light-text-color);
+  background: -webkit-gradient(linear, top left, bottom left, color-stop(0, #2bbe60), color-stop(1, #0f9d58));
+  background: -webkit-linear-gradient(top, #2bbe60, #0f9d58);
+  background: linear-gradient(to bottom, #2bbe60, #0f9d58);
+  border: 1px solid #0f9d58;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgb (0 0 0 / 8%), inset 0 -1px 4px rgb (151 159 175 / 20%);
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 12px;
+  height: 27px;
+  font-size: 12px;
+  position: relative;
+  text-align: center;
+  text-decoration: none !important;
+  vertical-align: middle;
+  color: #fff !important;
+}
+
+.DynBiz_btn__spinner {
+  align-items: center;
+  justify-content: center;
+}
+
+.DynBiz_btn__bounce1,
+.DynBiz_btn__bounce2,
+.DynBiz_btn__bounce3 {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  animation: DynBiz_btn__animation 1.4s ease-in-out infinite both;
+}
+
+.DynBiz_btn__bounce1 {
+  animation-delay: -0.32s;
+  margin-right: 2px;
+}
+
+.DynBiz_btn__bounce2 {
+  animation-delay: -0.16s;
+  margin-right: 2px;
+}
+
+@keyframes DynBiz_btn__animation {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+.DynBiz_PageTitle_Input {
+  width: 160px;
+  height: 100%;
+  border: 1px solid #d6dbdf;
+  padding: 6px 6px 6px 8px;
+  border-radius: 0 !important;
+  outline: none;
+  font-size: 12px;
+  color: #3f4254;
+  font-weight: 400;
+  height: 28px;
+}

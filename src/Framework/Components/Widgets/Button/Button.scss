@@ -1,0 +1,101 @@
+.DynBiz_Btn {
+  padding: 5px 10px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  grid-column-gap: 8px;
+  display: grid;
+  grid-template-columns: max-content;
+  align-items: center;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+  outline: none;
+  background-color: #fff;
+  color: #222;
+  line-height: 15px;
+  height: max-content;
+  width: max-content;
+
+  svg {
+    font-size: 14px !important;
+  }
+}
+
+.DynBiz_icon_Btn {
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 8px;
+}
+
+.DynBiz_Btn:active {
+  transform: scale(0.96);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.08);
+}
+
+.DynBiz_primary_Btn {
+  background-color: #3699ff !important;
+  color: #fff !important;
+}
+
+.DynBiz_secondary_Btn {
+  background-color: #50c6d0 !important;
+  color: #fff !important;
+}
+
+.DynBiz_grey_Btn {
+  background-color: #85929e !important;
+  color: #fff !important;
+}
+
+.DynBiz_danger_Btn {
+  background-color: #f64e60 !important;
+  color: #fff !important;
+}
+
+.DynBiz_Btn:hover {
+  opacity: 0.7;
+}
+
+.FormBtnActive {
+  pointer-events: none !important;
+}
+
+.DynBiz_btn__spinner {
+  align-items: center;
+  justify-content: center;
+}
+
+.DynBiz_btn__bounce1,
+.DynBiz_btn__bounce2,
+.DynBiz_btn__bounce3 {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  animation: DynBiz_btn__animation 1.4s ease-in-out infinite both;
+}
+
+.DynBiz_btn__bounce1 {
+  animation-delay: -0.32s;
+  margin-right: 2px;
+}
+
+.DynBiz_btn__bounce2 {
+  animation-delay: -0.16s;
+  margin-right: 2px;
+}
+
+@keyframes DynBiz_btn__animation {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}

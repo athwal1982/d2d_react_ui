@@ -1,0 +1,40 @@
+.tox-tinymce {
+  border-radius: 0px !important;
+  border: 0px !important;
+}
+
+.tox .tox-statusbar,
+.tox .tox-notification--warn,
+.tox .tox-notification--warning {
+  display: none !important;
+}
+
+.tox:not(.tox-tinymce-inline) .tox-editor-header {
+  padding: 1px 0px !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #d8dcde !important;
+}
+
+.tox .tox-tbtn--enabled,
+.tox .tox-tbtn--enabled:hover {
+  background: #fe824f !important;
+}
+
+.tox .tox-tbtn--enabled svg,
+.tox .tox-tbtn--enabled:hover svg {
+  fill: var(--white) !important;
+}
+
+.tox .tox-tbtn:hover,
+.tox .tox-tbtn:hover svg {
+  background: #d6dbdf !important;
+  color: #222f3e !important;
+}
+
+.tox .tox-tbtn:hover svg {
+  fill: #222f3e !important;
+}
+
+.mce-content-body {
+  margin: 12px !important;
+}

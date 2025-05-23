@@ -1,0 +1,220 @@
+.Box {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  position: relative;
+
+  .MainBox {
+    width: 75px;
+    background: var(--fg-sidebar-bg);
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+    justify-content: center;
+    overflow: auto;
+
+    .ClientLogo {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 0px;
+      box-shadow: rgba(0, 27, 71, 0.24) 0px 1px 3px;
+      background: var(--fg-sidebar-logo-bg);
+
+      button {
+        background: var(--white);
+        padding: 6px 8px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        height: 44px;
+        border: 0px;
+
+        &:hover,
+        &:active {
+          background-color: rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 0 2px #2c5cc5 !important;
+          cursor: pointer;
+          transform: none !important;
+        }
+
+        img {
+          width: 32px;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 75px;
+      overflow: auto;
+
+      li {
+        margin-bottom: 10px;
+
+        button {
+          color: var(--white);
+          display: block;
+          font-size: 24px;
+          height: 60px;
+          position: relative;
+          text-align: center;
+          width: 75px;
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          padding: 5px 0px;
+          background: transparent;
+          border: 0px;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--white);
+            cursor: pointer;
+          }
+
+          &.Active {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--white);
+            cursor: pointer;
+          }
+
+          &:active {
+            box-shadow: none !important;
+            transform: none !important;
+          }
+
+          svg {
+            justify-self: center;
+          }
+
+          span {
+            font-size: 11px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .SubBox {
+    min-width: 250px;
+    background-color: var(--white);
+    z-index: 1000000;
+    padding: 6px 0px;
+    transition: width 500ms cubic-bezier(0.2, 0, 0, 1) 0s;
+    position: absolute;
+    left: 75px;
+    top: 50px;
+    bottom: 0px;
+    border-top: 1px solid var(--gray-200);
+
+    &.CollapsedBar {
+      min-width: 0px !important;
+      width: 0px !important;
+      visibility: hidden !important;
+
+      ul {
+        display: none;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 6px;
+      margin: 0px;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        color: var(--gray-800);
+        padding: 0px;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+        margin-bottom: 6px;
+
+        button {
+          position: relative;
+          border-radius: 4px;
+          display: flex;
+          -webkit-box-align: center;
+          align-items: center;
+          width: 100%;
+          text-align: left;
+          cursor: pointer;
+          font-weight: 500;
+          padding: 8px 16px;
+          background: transparent;
+          border: 0px;
+
+          &::before {
+            content: "-";
+            padding-right: 5px;
+          }
+
+          &:hover {
+            background-color: var(--gray-110);
+          }
+
+          &:active {
+            box-shadow: none !important;
+            transform: none !important;
+          }
+
+          &.Active {
+            background-color: var(--fg-sidebar-Active-Menu);
+            color: var(--white) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.BackDrop {
+  position: fixed;
+  background-color: var(--fg-backdrop-bg);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 50px;
+  bottom: 0;
+  left: 75px;
+  right: 0;
+}
+
+.LogoutBox {
+  border: 1px solid var(--gray-220);
+  background: var(--red-600);
+  border-color: var(--red-600);
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  height: 44px;
+  width: 50px;
+  line-height: 16px;
+  padding: 0 14px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  gap: 10px;
+  margin: 0px 0px 10px 12px;
+
+  svg {
+    height: 22px;
+    width: 22px;
+  }
+
+  span {
+    color: var(--white);
+  }
+}

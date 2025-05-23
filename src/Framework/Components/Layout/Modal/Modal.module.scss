@@ -1,0 +1,255 @@
+/* Popup Basic Styles
+============================================================================================================= */
+
+.Overlay {
+  background-color: rgba(9, 30, 66, 0.48);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &.transparent {
+    background-color: rgba(9, 30, 66, 0) !important;
+  }
+}
+
+.AnimOn {
+  transform: scale(1.02) !important;
+}
+
+.popup {
+  background: #fff;
+  position: fixed;
+  display: grid;
+  grid-template-rows: max-content auto;
+  box-shadow: 0 12px 32px rgba(0, 27, 71, 0.12);
+  border-radius: 1px;
+  overflow: auto !important;
+  margin: auto;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  animation: ScaleAnimate 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+
+  .Header {
+    display: grid;
+    grid-template-columns: max-content auto max-content;
+    align-items: center;
+    column-gap: 8px;
+    padding: 8px 12px;
+    height: 40px;
+    background: #f2f3f5;
+    border-bottom: 1px solid #ced1d6;
+    line-height: 20px;
+    letter-spacing: 0;
+    width: 100%;
+    cursor: move;
+    grid-row: 1;
+
+    .ContentBox {
+      display: flex;
+    }
+
+    h2,
+    .CloseBtn {
+      -webkit-user-select: none !important;
+      -ms-user-select: none !important;
+      -moz-user-select: none !important;
+      user-select: none !important;
+      -webkit-user-drag: none !important;
+    }
+
+    h2 {
+      white-space: nowrap;
+      font-size: 16px;
+      color: #34495e;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      margin: 0px;
+    }
+
+    .CloseBtn {
+      height: 20px;
+
+      svg {
+        height: 17px;
+        color: #85929e;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+          color: #f64e60 !important;
+        }
+      }
+    }
+  }
+
+  .FormContent {
+    display: grid;
+    grid-template-rows: auto -webkit-max-content;
+    grid-template-rows: auto max-content;
+    overflow: auto;
+    grid-row: 2;
+
+    .BodyContent {
+      display: grid;
+      overflow: auto;
+    }
+  }
+
+  .Footer {
+    display: grid;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 12px;
+    height: 44px;
+    background: #f2f3f5;
+    border-top: 1px solid #ced1d6;
+    line-height: 20px;
+    letter-spacing: 0;
+    width: 100%;
+
+    .FooterBox {
+      display: grid;
+      grid-gap: 12px;
+      gap: 12px;
+      grid-auto-flow: column;
+
+      button {
+        height: 29px !important;
+        padding: 6px 14px !important;
+        line-height: 6px !important;
+      }
+    }
+  }
+}
+
+/* Popup FullWidth Style
+================================================================================== */
+
+.full {
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0px;
+  width: 100vw;
+  height: 100vh;
+  border: 0px;
+  border-radius: 0px;
+  animation: ScaleAnimate 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+  grid-template-rows: max-content auto !important;
+}
+
+/* Popup FullWidth Style
+================================================================================== */
+
+/* Popup HalfWidth Style
+================================================================================== */
+
+.half {
+  top: 0px;
+  bottom: 0px;
+  min-width: 50vw;
+  max-width: 90vw;
+  height: 100vh;
+  animation: ScaleAnimate 0.6s;
+  grid-template-rows: max-content auto !important;
+}
+
+/* Popup HalfWidth Style
+================================================================================== */
+
+/* Popup Top Styles
+================================================================================== */
+
+.top {
+  top: 40px;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  width: max-content;
+  max-height: calc(100vh - 80px);
+  min-width: 180px;
+  max-width: 100vw;
+  animation: ScaleAnimate 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+}
+
+/* Popup Top Styles
+================================================================================== */
+
+/* Popup Center Styles
+================================================================================== */
+
+.center {
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: max-content;
+  height: max-content;
+  max-height: calc(100vh - 80px);
+  min-width: 180px;
+  max-width: 100vw;
+  animation: ScaleAnimate 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+}
+
+/* Popup Center Styles
+================================================================================== */
+
+/* Popup Bottom Styles
+================================================================================== */
+
+.bottom {
+  top: auto;
+  bottom: 0px;
+  width: max-content;
+  max-height: 100vh;
+  min-width: 180px;
+  max-width: 100vw;
+  animation: ScaleAnimate 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+}
+
+/* Popup Bottom Styles
+================================================================================== */
+
+/* Popup Free Styles
+================================================================================== */
+
+.free {
+  width: max-content;
+  height: max-content;
+  min-width: 180px;
+  max-width: 100vw;
+  animation: ScaleAnimate 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+}
+
+/* Popup Free Styles
+================================================================================== */
+
+@keyframes SlideAnimate {
+  0% {
+    right: -300px;
+    opacity: 0;
+  }
+
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes ScaleAnimate {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Popup Basic Styles
+============================================================================================================= */

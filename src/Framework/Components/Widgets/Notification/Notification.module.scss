@@ -1,0 +1,108 @@
+.wrapper {
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  width: 320px;
+  z-index: 999999999999999999;
+
+  .Toast {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    animation: SlideLeft 0.5s;
+    animation-fill-mode: forwards;
+    width: 320px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #d6dbdf;
+
+    .ToastBox {
+      display: grid;
+      grid-template-columns: auto 20px;
+      padding: 11px;
+      row-gap: 6px;
+      min-height: 60px;
+
+      button {
+        height: max-content;
+        display: flex;
+        background: transparent;
+        border: transparent;
+
+        svg {
+          color: #85929e;
+          font-size: 18px;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: 13px;
+        word-break: break-all;
+        color: #212529;
+        grid-column: span 2;
+        padding-right: 4px;
+        font-weight: 500;
+      }
+    }
+
+    &.Success {
+      .ToastIcon {
+        color: green;
+      }
+      .ToastBar {
+        background: green;
+      }
+    }
+
+    &.Error {
+      .ToastIcon {
+        color: red;
+      }
+      .ToastBar {
+        background: red;
+      }
+    }
+
+    &.Warning {
+      .ToastIcon {
+        color: #f1c40f;
+      }
+      .ToastBar {
+        background: #f1c40f;
+      }
+    }
+
+    &.exit {
+      animation: SlideRight 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    .ToastBar {
+      height: 4px;
+      grid-column: span 2;
+    }
+  }
+}
+
+@keyframes SlideLeft {
+  0% {
+    margin-left: 120%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes SlideRight {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 120%;
+  }
+}

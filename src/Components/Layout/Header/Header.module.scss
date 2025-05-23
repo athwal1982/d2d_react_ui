@@ -1,0 +1,125 @@
+.Box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: var(--header-index);
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 2px 2px rgba(0, 0, 60, 0.08);
+  height: 50px;
+  background: var(--white);
+  margin-left: 75px;
+  padding: 0px 10px 0px 14px;
+  display: inline-flex;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  column-gap: 20px;
+  align-items: center;
+
+  .PageTitle {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    padding: 0px 20px 0px 0px;
+    border-right: 1px #cfd7df solid;
+    min-width: 220px;
+
+    svg {
+      font-size: 22px;
+      margin-right: 8px;
+    }
+
+    p {
+      color: #173247;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: 700;
+      font-size: 16px;
+      font-family: var(--fg-headingsFont);
+    }
+  }
+
+  .UserInfo {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    padding: 0px 20px 0px 0px;
+    min-width: 360px;
+    justify-content: flex-end;
+
+    p {
+      color: #173247;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: 700;
+      font-size: 16px;
+      font-family: var(--fg-headingsFont);
+    }
+  }
+
+  .TicketTabBox {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .SubBoxDiv {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+.marquee {
+  width: 100%;
+  border: 1px solid red;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee span {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 35%;
+  right: 32%;
+  background-image: linear-gradient(to right, #f8a641, #f77321);
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: #000000;
+  border-radius: 5px;
+  z-index: 99999999;
+  animation: ScaleAnimate 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+}
+
+@keyframes popup {
+  10% {
+    top: 0px;
+  }
+  90% {
+    top: 0px;
+  }
+  100% {
+    top: 0px;
+  }
+}

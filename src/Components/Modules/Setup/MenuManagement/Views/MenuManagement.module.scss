@@ -1,0 +1,30 @@
+.PageStart {
+  display: grid;
+  grid-template-rows: max-content auto;
+  overflow: auto;
+}
+
+.Manage_Menu__DatatableMDiv {
+  overflow: auto;
+  padding: 0.6rem;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 30px 0px rgb(82 63 105 / 5%);
+  border: 1px solid #d6dbdf;
+  height: 100%;
+}
+.Manage_Menu__DatatableDiv::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.Menu_User__Pagetitle_btnTbl {
+  padding: 0px 16px;
+  height: 20px;
+  font-size: 10px;
+  border: none;
+  border-radius: 2px;
+  color: var(--Main-light-text-color);
+  background-color: var(--Main-Primary-Color);
+  cursor: pointer;
+}

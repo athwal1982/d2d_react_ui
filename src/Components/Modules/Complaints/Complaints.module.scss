@@ -1,0 +1,26 @@
+.PageStart {
+  display: grid;
+  grid-template-rows: max-content auto;
+  overflow: auto;
+}
+
+.StatusBox {
+  display: flex;
+  font-size: 10px;
+  margin: 0px -11px;
+  padding: 0px 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  height: 100%;
+}
+.spanStatusBox {
+  display: flex;
+  border-radius: 6px;
+  height: 20px;
+  width: calc(100% + 8px);
+  margin-top: 1px;
+  padding: 1px 3px 1px 3px;
+  align-items: center;
+  justify-content: center;
+}

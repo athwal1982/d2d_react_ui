@@ -1,0 +1,65 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "react-app", "react-app/jest", "airbnb", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./jsconfig.json"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"],
+    "react-hooks/exhaustive-deps": ["off"],
+    "jsx-a11y/label-has-associated-control": ["off"],
+    "jsx-a11y/control-has-associated-label": ["off"],
+    "import/no-unresolved": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "no-alert": ["error"],
+    "no-console": ["off"],
+    "no-debugger": ["off"],
+    "no-shadow": ["off"],
+    "func-names": ["off"],
+    "no-nested-ternary": ["off"],
+    "import/prefer-default-export": ["off"],
+    "react/forbid-prop-types": ["off"],
+    "react/require-default-props": ["off"],
+    "react/no-array-index-key": ["off"],
+    "no-param-reassign": 0,
+    "dot-notation": ["off"],
+    "prefer-regex-literals": ["off"],
+    "no-dupe-keys": ["off"],
+    "react/jsx-boolean-value": ["off"],
+    "react/no-unused-prop-types": ["off"],
+    "capitalized-comments": [
+      "error",
+      "always",
+      {
+        "ignorePattern": "",
+        "ignoreInlineComments": false
+      }
+    ],
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "line": {
+          "markers": ["/"],
+          "exceptions": ["-", "+"]
+        },
+        "block": {
+          "markers": ["!"],
+          "exceptions": ["*"],
+          "balanced": true
+        }
+      }
+    ]
+  }
+}

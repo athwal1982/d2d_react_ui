@@ -1,0 +1,167 @@
+:root {
+  --Customized--Agrid-Main-Color: #0d63ad;
+  --Customized--Agrid-EvenRow-Color: #b4d0eb;
+  --Customized--Agrid-CellRow-BorderColor: #98b7ce;
+  --Customized--Agrid-HeaderRow-BorderColor: #ebedef;
+  --Customized--Agrid-Header-TextColor: #fff;
+  --Customized--Agrid-Cell-TextColor: #374759;
+  --Customized--Agrid-Row-HoverColor: #fcf3cf;
+}
+
+.AGDataGrid.ag-theme-blue {
+  position: relative;
+  border: 1px solid var(--Customized--Agrid-Main-Color) !important;
+  margin: 6px;
+
+  .ag-row-odd {
+    background-color: var(--Customized--Agrid-EvenRow-Color);
+  }
+
+  .ag-ltr .ag-cell {
+    border-right: 1px solid var(--Customized--Agrid-CellRow-BorderColor) !important;
+  }
+
+  .ag-row {
+    border-bottom: 1px solid var(--Customized--Agrid-CellRow-BorderColor) !important;
+  }
+
+  .ag-tabs-header {
+    background-color: var(--Customized--Agrid-Main-Color) !important;
+    border-bottom-color: var(--Customized--Agrid-Main-Color) !important;
+  }
+
+  .ag-menu {
+    border-color: var(--Customized--Agrid-Main-Color) !important;
+  }
+
+  .ag-menu-separator-part::after {
+    border-top-color: var(--Customized--Agrid-Main-Color) !important;
+  }
+
+  .ag-tab-selected {
+    border-color: var(--Customized--Agrid-Main-Color) !important;
+  }
+
+  .ag-header {
+    background-color: var(--Customized--Agrid-Main-Color) !important;
+    border-bottom: solid 1px;
+    border-bottom-color: var(--Customized--Agrid-HeaderRow-BorderColor) !important;
+  }
+
+  .ag-root-wrapper {
+    border: 0px;
+  }
+}
+
+span.ag-header-cell-text {
+  color: var(--Customized--Agrid-Header-TextColor) !important;
+  font-weight: 500 !important;
+}
+
+.Biz_CustomizedAgGrid.ag-theme-blue {
+  .ag-cell.ag-cell-last-left-pinned:not(.ag-cell-range-right):not(.ag-cell-range-single-cell),
+  .ag-pinned-left-header {
+    border-right-color: var(--Customized--Agrid-CellRow-BorderColor) !important;
+  }
+
+  .ag-header {
+    border-right-color: var(--Customized--Agrid-HeaderRow-BorderColor) !important;
+  }
+
+  .ag-header-group-cell::after {
+    background-color: var(--Customized--Agrid-HeaderRow-BorderColor) !important;
+  }
+
+  .ag-header-cell::after {
+    border: 0px;
+  }
+
+  .ag-ltr .ag-cell {
+    color: var(--Customized--Agrid-Cell-TextColor) !important;
+    font-weight: 400;
+  }
+}
+
+span.ag-overlay-no-rows-center {
+  color: var(--Customized--Agrid-Cell-TextColor) !important;
+  font-weight: 400;
+}
+
+.Biz_CustomizedAgGrid.ag-theme-blue {
+  .ag-row-hover {
+    background-color: var(--Customized--Agrid-Row-HoverColor) !important;
+    cursor: pointer !important;
+  }
+
+  input[class^="ag-"][type="text"] {
+    border: 0px !important;
+  }
+}
+
+.ag-paging-button .ag-icon {
+  color: #333 !important;
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+.ag-watermark {
+  display: none !important;
+}
+
+.ag-popup-child .ag-icon {
+  color: #333 !important;
+}
+
+.ag-icon.ag-icon-tree-open,
+.ag-icon.ag-icon-tree-closed {
+  color: #333 !important;
+}
+
+.ag-icon {
+  color: #fff !important;
+}
+
+.ag-theme-blue .ag-row {
+  border-bottom: 1px solid #9bc2e6;
+}
+
+span.ag-header-cell-text,
+.ag-cell-value,
+.ag-group-value {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.ag-theme-blue {
+  .ag-ltr {
+    .ag-has-focus .ag-cell-focus:not(.ag-cell-range-selected),
+    .ag-context-menu-open .ag-cell-focus:not(.ag-cell-range-selected),
+    .ag-has-focus .ag-full-width-row.ag-row-focus .ag-cell-wrapper.ag-row-group {
+      border-color: #5d6d7e !important;
+    }
+
+    .ag-cell-range-single-cell {
+      border-color: #5d6d7e !important;
+
+      &.ag-cell-range-handle {
+        border-color: #5d6d7e !important;
+      }
+    }
+  }
+
+  .ag-rtl {
+    .ag-has-focus .ag-cell-focus:not(.ag-cell-range-selected),
+    .ag-context-menu-open .ag-cell-focus:not(.ag-cell-range-selected),
+    .ag-has-focus .ag-full-width-row.ag-row-focus .ag-cell-wrapper.ag-row-group {
+      border-color: #5d6d7e !important;
+    }
+
+    .ag-cell-range-single-cell {
+      border-color: #5d6d7e !important;
+
+      &.ag-cell-range-handle .ag-theme-blue .ag-row {
+        border-color: #5d6d7e !important;
+      }
+    }
+  }
+}
