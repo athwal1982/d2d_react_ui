@@ -274,6 +274,7 @@ function CumulativeStatus() {
           name="txtFromDate"
           value={formValues.txtFromDate}
           onChange={(e) => updateState("txtFromDate", e.target.value)}
+          style={{ width: "120px" }}
         />
         <PageBar.Input
           ControlTxt="To Date"
@@ -282,6 +283,7 @@ function CumulativeStatus() {
           name="txtToDate"
           value={formValues.txtToDate}
           onChange={(e) => updateState("txtToDate", e.target.value)}
+          style={{ width: "120px" }}
         />
 
         <PageBar.Select
