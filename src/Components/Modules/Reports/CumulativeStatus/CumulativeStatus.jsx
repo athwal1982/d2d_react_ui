@@ -167,8 +167,9 @@ function CumulativeStatus() {
       const formData = {
         fromDate: formValues.txtFromDate ? dateToCompanyFormat(formValues.txtFromDate) : "",
         toDate: formValues.txtToDate ? dateToCompanyFormat(formValues.txtToDate) : "",
-        subDistrictCode:
-          formValues.txtSubDistrict && formValues.txtSubDistrict.SubDistrictMasterCode ? formValues.txtSubDistrict.SubDistrictMasterCode.toString() : "0",
+        stateID: formValues.txtState && formValues.txtState.StateMasterID ? formValues.txtState.StateMasterID : 0,
+        districtMasterCode: formValues.txtDistrict && formValues.txtDistrict.DistrictMasterCode ? formValues.txtDistrict.DistrictMasterCode : 0,
+        subDistrictCode: formValues.txtSubDistrict && formValues.txtSubDistrict.SubDistrictMasterCode ? formValues.txtSubDistrict.SubDistrictMasterCode : 0,
       };
       const result = await getSubDistrictServiceData(formData);
       setLoadingTicketHistoryDataList(false);

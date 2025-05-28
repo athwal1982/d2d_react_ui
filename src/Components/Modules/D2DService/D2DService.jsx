@@ -28,6 +28,8 @@ const cellTemplate = (props) => {
   const dt = dateToSpecificFormat(moment(), "YYYY-MM-DD");
   const currentDate = new Date(dt);
   const appointntmentDate = new Date(props.data.AppointmentDate);
+  const userData = getSessionStorage("user");
+  const ChkAppAccessTypeID = userData && userData.AppAccessTypeID ? userData.AppAccessTypeID.toString() : "0";
   return (
     <div style={{ display: "flex", gap: "4px", marginTop: "2px" }}>
       {props.data.StatusID && props.data.StatusID !== 133001 ? (
@@ -51,7 +53,7 @@ const cellTemplate = (props) => {
           onClick={() => props.toggleVLEAssignedDetailsClick(props.data)}
         />
       ) : null}
-      {props.data.StatusID && props.data.StatusID === 133002 ? (
+      {props.data.StatusID && props.data.StatusID === 133002 && ChkAppAccessTypeID === "503" ? (
         appointntmentDate < currentDate ? null : (
           <MdAssignment
             title={props.data.VLEMapAuto === "YES" ? "VLE Assign Auto" : props.data.VLEMapAuto === "NO" ? "VLE Assign Manual" : ""}
@@ -60,7 +62,7 @@ const cellTemplate = (props) => {
           />
         )
       ) : null}
-      {props.data.StatusID && props.data.StatusID === 133009 ? (
+      {props.data.StatusID && props.data.StatusID === 133009 && ChkAppAccessTypeID === "503" ? (
         <GrSchedules
           title="Reschedule The Appointment"
           style={{ fontSize: "16px", color: "#34495E", cursor: "pointer" }}
@@ -924,7 +926,7 @@ function D2DService() {
                     toggleVLEAssignedDetailsClick,
                     toggleRescheduleAppointmentClick,
                   }}
-                  hide={showHideColumn || ChkAppAccessTypeID !== "503"}
+                  hide={showHideColumn}
                 />
                 <DataGrid.Column valueGetter="node.rowIndex + 1" field="#" headerName="Sr No." width={80} pinned="left" />
                 {/* <DataGrid.Column field="Category" headerName="Call Category" width="140px" /> */}
