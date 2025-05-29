@@ -82,6 +82,10 @@ function Home() {
                 <span>Appointment</span>
                 <span>0</span>
               </div>
+              {/* <div className={BizClass.ScoreBoard}>
+                <span>Cancel</span>
+                <span>0</span>
+              </div> */}
             </>
           )}
         </div>

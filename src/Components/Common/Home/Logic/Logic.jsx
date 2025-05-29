@@ -54,7 +54,10 @@ function HomeLogics() {
         if (result.response.responseData) {
           // A Header Counter
           if (result.response.responseData.dashbard) {
-            setsatatusCount(result.response.responseData.dashbard);
+            const filteredData = result.response.responseData.dashbard.filter((data) => {
+              return data.STATUS !== "Cancel";
+            });
+            setsatatusCount(filteredData);
           } else {
             setsatatusCount([]);
           }
@@ -85,6 +88,13 @@ function HomeLogics() {
                 obj[state] = resultconverted[key][state];
               });
               return obj;
+            });
+            finalResult.forEach((obj) => {
+              if (obj.Status === "Registration") {
+                obj.Status = "Registered";
+              } else if (obj.Status === "ReScheduled") {
+                obj.Status = "Re-Scheduled";
+              }
             });
             const columns = BindTableHeader(finalResult);
             setstateHeaderColumn(columns);
